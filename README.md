@@ -12,30 +12,35 @@
  
  write the request permission program(Consumer impl):
 
-      kotlin style:
-      var rxKotlinPermission: RxKotlinPermission = RxKotlinPermission(this)
-                rxKotlinPermission.requestCamera().subscribe { rxInteractive ->
-             /**
-               * success
-               */
-               }
+  kotlin style:
                
-      java style:
-      RxKotlinPermission rxKotlinPermission;
-      rxKotlinPermission = new RxKotlinPermission(this);
-      rxKotlinPermission.requestCamera().subscribe(new Consumer<RxInteractive>() {
-                @Override
-                public void accept(@NonNull RxInteractive rxInteractive) throws Exception {
-                        /**
-                         * success
-                         */
-                    }
-                });
+    
+       var rxKotlinPermission: RxKotlinPermission = RxKotlinPermission(this)
+                 rxKotlinPermission.requestCamera().subscribe { rxInteractive ->
+              /**
+                * success
+                */
+                }
 
+  java style:
+                
+       RxKotlinPermission rxKotlinPermission;
+       rxKotlinPermission = new RxKotlinPermission(this);
+       rxKotlinPermission.requestCamera().subscribe(new Consumer<RxInteractive>() {
+                 @Override
+                 public void accept(@NonNull RxInteractive rxInteractive) throws Exception {
+                         /**
+                          * success
+                          */
+                     }
+                 });
  
+  
+  
  write the request permission program(Observer impl):
 
-      java style:
+ java style and kotlin style:
+     
       rxKotlinPermission.requestCamera().subscribe(new Observer<RxInteractive>() {
                  @Override
                  public void onSubscribe(Disposable d) {
@@ -60,13 +65,11 @@
                  }
              });
              
-  
 Hide the interaction  Default Display:
 
+kotlin style:
        
          rxKotlinPermission.setCancelInteractive();
-       
-         kotlin style:
          rxKotlinPermission.requestCamera().subscribe(Consumer<RxInteractive> { rxInteractive ->
                    when (rxInteractive.rxMode) {
                        RxGracePermission.RxMode.GRACE_RECRY -> Log.e(TAG, "GRACE_RECRY")
@@ -75,32 +78,31 @@ Hide the interaction  Default Display:
                        RxGracePermission.RxMode.GRACE_HIDE -> Log.e(TAG, "GRACE_HIDE")
                    }
                })
-               
-         java style:
-         rxKotlinPermission.requestCamera().subscribe(new Consumer<RxInteractive>() {
-                   @Override
-                   public void accept(@NonNull RxInteractive rxInteractive) throws Exception {
-                       switch (rxInteractive.getRxMode()) {
-                           case GRACE_RECRY:
-                               Log.e(TAG, "GRACE_RECRY");
-                               break;
-                           case GRACE_ALLOW:
-                               Log.e(TAG, "GRACE_ALLOW");
-                               break;
-                           case GRACE_REFUSE:
-                               Log.e(TAG, "GRACE_REFUSE");
-                               break;
-                           case GRACE_HIDE:
-                               Log.e(TAG, "GRACE_HIDE");
-                               break;
-                       }
-                   }
-               });
-       
- 
-   
-Custom request permission:
+     
+java style:
 
+          rxKotlinPermission.setCancelInteractive();
+         rxKotlinPermission.requestCamera().subscribe(new Consumer<RxInteractive>() {
+                        @Override
+                        public void accept(@NonNull RxInteractive rxInteractive) throws Exception {
+                            switch (rxInteractive.getRxMode()) {
+                                case GRACE_RECRY:
+                                    Log.e(TAG, "GRACE_RECRY");
+                                    break;
+                                case GRACE_ALLOW:
+                                    Log.e(TAG, "GRACE_ALLOW");
+                                    break;
+                                case GRACE_REFUSE:
+                                    Log.e(TAG, "GRACE_REFUSE");
+                                    break;
+                                case GRACE_HIDE:
+                                    Log.e(TAG, "GRACE_HIDE");
+                                    break;
+                            }
+                        }
+                    });
+ 
+Custom request permission:
 
        java style:
        rxKotlinPermission.request(Manifest.permission.WRITE_SETTINGS,
