@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">RxKotlinPermission</string>
+
+    <!-- CAMERA-->
+    <string name="android.permission.CAMERA">照相机</string>
+
+    <!-- STORAGE -->
+    <string name="android.permission.WRITE_EXTERNAL_STORAGE">存储</string>
+    <string name="android.permission.READ_EXTERNAL_STORAGE">存储</string>
+
+    <!-- SMS -->
+    <string name="android.permission.SEND_SMS">短信</string>
+    <string name="android.permission.RECEIVE_SMS">短信</string>
+    <string name="android.permission.READ_SMS">短信</string>
+    <string name="android.permission.RECEIVE_WAP_PUSH">短信</string>
+    <string name="android.permission.RECEIVE_MMS">短信</string>
+
+    <!-- PHONE -->
+    <string name="android.permission.READ_PHONE_STATE">电话</string>
+    <string name="android.permission.CALL_PHONE">电话</string>
+    <string name="android.permission.READ_CALL_LOG">电话</string>
+    <string name="android.permission.WRITE_CALL_LOG">电话</string>
+    <string name="android.permission.ADD_VOICEMAIL">电话</string>
+    <string name="android.permission.USE_SIP">电话</string>
+    <string name="android.permission.PROCESS_OUTGOING_CALLS">电话</string>
+
+    <!-- MICROPHONE -->
+    <string name="android.permission.RECORD_AUDIO">录音</string>
+
+    <!-- LOCATION -->
+    <string name="android.permission.ACCESS_FINE_LOCATION">位置</string>
+    <string name="android.permission.ACCESS_COARSE_LOCATION">位置</string>
+
+    <!-- CONTACTS -->
+    <string name="android.permission.READ_CONTACTS">通讯录</string>
+    <string name="android.permission.WRITE_CONTACTS">通讯录</string>
+    <string name="android.permission.GET_ACCOUNTS">通讯录</string>
+
+    <!-- CALENDAR -->
+    <string name="android.permission.READ_CALENDAR">日历</string>
+    <string name="android.permission.WRITE_CALENDAR">日历</string>
+
+
+    <!-- Default hints -->
+    <string name="permission">权限</string>
+    <string name="decline_start">我们需要访问的</string>
+    <string name="decline_end">已被你拒绝,请到手机设置页面手动开启</string>
+    <string name="forever_start">我们需要访问的</string>
+    <string name="forever_end">已被你拒绝,请点击允许!</string>
+    <string name="permission_again">获取权限</string>
+    <string name="permission_setting">设置</string>
+    <string name="permission_cancel">取消</string>
+    <string name="permission_title_permission_failed">权限被禁止</string>
+    <string name="permission_title_permission_rationale">权限已被拒绝</string>
+
+</resources>
