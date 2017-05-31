@@ -1,7 +1,8 @@
 **Description**
 
  Android Kotlin Request permission library,Internal implementation request permission, successful ||  failure interface interaction
-                
+ Support internationalization(English Chinese)
+ 
 **Getting started**
 
 **The first step is to include RxKotlinPermission into your project, for example, as a Gradle compile dependency:**
