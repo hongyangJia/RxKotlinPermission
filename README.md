@@ -4,7 +4,7 @@
                 
 **Getting started**
 
-**The first step is to include xxxx into your project, for example, as a Gradle compile dependency:**
+**The first step is to include xxxxx into your project, for example, as a Gradle compile dependency:**
 
     maven { url 'https://jitpack.io' }
     compile 'com.github.hongyangJia:AndroidPermissions:1.0.2'
@@ -34,7 +34,7 @@
      
                  @Override
                  public void onNext(RxInteractive rxLimit) {
-                   
+                    
                  }
      
                  @Override
@@ -52,5 +52,4 @@
 Hide the interaction  Default Display:
 
        rxKotlinPermission.setCancelInteractive();
-       
-             
+ 
