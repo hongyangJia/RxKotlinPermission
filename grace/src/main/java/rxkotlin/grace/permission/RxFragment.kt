@@ -7,6 +7,7 @@ import android.support.annotation.RequiresApi
 import android.content.pm.PackageManager
 import java.util.*
 
+
 /**
  * Created by hongyang on 17-5-19.
  */
@@ -93,8 +94,11 @@ class RxFragment : Fragment() {
             onHasPermissionListener!!.refuse(arrayList)
 
         } else {
-            val list = Arrays.asList(permissions) as ArrayList<String>
-            onHasPermissionListener!!.allow(list)
+            var allowArry = ArrayList<String>()
+            for (i in 0..permissions!!.size - 1) {
+                allowArry.add(permissions!![i])
+            }
+            onHasPermissionListener!!.allow(allowArry)
         }
     }
 

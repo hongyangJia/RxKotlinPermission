@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.Arrays;
+import java.util.List;
+
 import io.reactivex.Observer;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
@@ -111,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
      * customLayout
      */
    public void customLayout(){
+
+
         rxKotlinPermission.settingRequest().setting(new RxRequest.Builder().title("Current permissions").message("Permission description").build());
     }
 
