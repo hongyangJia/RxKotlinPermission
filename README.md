@@ -11,11 +11,9 @@
       maven { url 'https://jitpack.io' }
       compile 'com.github.hongyangJia:RxKotlinPermission:1.1.0'
 
- 
- write the request permission program(Consumer impl):
+**write the request permission program(Consumer impl):**
 
   kotlin style:
-               
     
        var rxKotlinPermission: RxKotlinPermission = RxKotlinPermission(this)
                  rxKotlinPermission.requestCamera().subscribe { rxInteractive ->
@@ -37,9 +35,7 @@
                      }
                  });
  
-  
-  
- write the request permission program(Observer impl):
+ **write the request permission program(Observer impl):**
 
  java style and kotlin style:
      
@@ -67,7 +63,7 @@
                  }
              });
              
-Hide the interaction  Default Display:
+ **Hide the interaction  Default Display:**
 
 kotlin style:
        
@@ -103,8 +99,8 @@ java style:
                             }
                         }
                     });
- 
-Custom request permission:
+
+**Custom request permission:**
  
  java style:
  
