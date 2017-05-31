@@ -7,7 +7,7 @@
 **The first step is to include RxKotlinPermission into your project, for example, as a Gradle compile dependency:**
 
     maven { url 'https://jitpack.io' }
-      compile 'com.github.hongyangJia:RxKotlinPermission:1.0'
+      compile 'com.github.hongyangJia:RxKotlinPermission:1.1.0'
 
  
  write the request permission program(Consumer impl):
