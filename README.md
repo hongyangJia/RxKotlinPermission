@@ -12,8 +12,8 @@
       compile 'com.github.hongyangJia:RxKotlinPermission:1.1.1'
       
       ext {
-          rxJava = 'io.reactivex.rxjava2:rxkotlin:2.0.3'
-          appcompat = 'com.android.support:appcompat-v7:25.3.1'
+          rxJava = 'io.reactivex.rxjava2:rxkotlin:x.x.x'
+          appcompat = 'com.android.support:appcompat-v7:xx.x.x'
       }
 
 **write the request permission program(Consumer impl):**
