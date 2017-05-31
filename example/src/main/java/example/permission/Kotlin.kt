@@ -16,6 +16,7 @@ import rxkotlin.grace.permission.RxRequest
  * Created by hongyang on 17-5-31.
  */
 class Kotlin {
+
     private val TAG = "Kotlin"
 
     /**
@@ -32,11 +33,11 @@ class Kotlin {
      */
     fun request(actvity: Activity) {
         var rxKotlinPermission: RxKotlinPermission = RxKotlinPermission(actvity)
-        rxKotlinPermission.requestCamera().subscribe(
-                /**
-                 * success
-                 */
-                Consumer<RxInteractive> { })
+        rxKotlinPermission.requestCamera().subscribe {
+            /**
+             * success
+             */
+        }
     }
 
     /**
@@ -64,7 +65,6 @@ class Kotlin {
             }
         })
     }
-
 
     /**
      * requestCustom
