@@ -17,9 +17,9 @@
     
        var rxKotlinPermission: RxKotlinPermission = RxKotlinPermission(this)
                  rxKotlinPermission.requestCamera().subscribe { rxInteractive ->
-              /**
-                * success
-                */
+                       /**
+                         * success
+                         */
                 }
 
   java style:
@@ -29,9 +29,9 @@
        rxKotlinPermission.requestCamera().subscribe(new Consumer<RxInteractive>() {
                  @Override
                  public void accept(@NonNull RxInteractive rxInteractive) throws Exception {
-                         /**
-                          * success
-                          */
+                       /**
+                         * success
+                         */
                      }
                  });
  
@@ -82,7 +82,7 @@ kotlin style:
 java style:
 
           rxKotlinPermission.setCancelInteractive();
-         rxKotlinPermission.requestCamera().subscribe(new Consumer<RxInteractive>() {
+          rxKotlinPermission.requestCamera().subscribe(new Consumer<RxInteractive>() {
                         @Override
                         public void accept(@NonNull RxInteractive rxInteractive) throws Exception {
                             switch (rxInteractive.getRxMode()) {
@@ -103,8 +103,9 @@ java style:
                     });
  
 Custom request permission:
-
-       java style:
+ 
+ java style:
+ 
        rxKotlinPermission.request(Manifest.permission.WRITE_SETTINGS,
                        Manifest.permission.WRITE_SETTINGS).subscribe(new Consumer<RxInteractive>() {
                    @Override
