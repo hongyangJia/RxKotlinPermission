@@ -92,7 +92,6 @@ class RxFragment : Fragment() {
                 onHasPermissionListener!!.hide(arrayList)
             }
             onHasPermissionListener!!.refuse(arrayList)
-
         } else {
             var allowArry = ArrayList<String>()
             for (i in 0..permissions!!.size - 1) {
