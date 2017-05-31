@@ -11,6 +11,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import rxkotlin.grace.permission.RxKotlinPermission;
 import rxkotlin.grace.permission.RxInteractive;
+import rxkotlin.grace.permission.RxRequest;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -114,6 +115,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    void ss(){
+
+    }
 
 
 }

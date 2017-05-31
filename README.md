@@ -112,5 +112,13 @@ java style:
                });
  
 
+**Custom layout:**
+     
+      By default, interactive copy is based on permission prompt
+                     
+      rxKotlinPermission.settingRequest().setting(new RxRequest.Builder().
+      title("Current permissions").message("Permission description").rxDialog("RxDialog imple ").build());
       
- 
+      
+      
+       
