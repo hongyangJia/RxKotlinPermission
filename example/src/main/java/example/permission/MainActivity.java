@@ -88,10 +88,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
+     * Custom
      */
     public  void requestCustom(){
-
+        rxKotlinPermission.setCancelInteractive();
         rxKotlinPermission.request(Manifest.permission.WRITE_SETTINGS,
                 Manifest.permission.WRITE_SETTINGS).subscribe(new Consumer<RxInteractive>() {
             @Override
