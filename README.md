@@ -119,6 +119,6 @@ java style:
       rxKotlinPermission.settingRequest().setting(new RxRequest.Builder().
       title("Current permissions").message("Permission description").rxDialog("RxDialog imple ").build());
       
-      
-      
-       
+ 
+**  specific information,please reference example module**
+ 

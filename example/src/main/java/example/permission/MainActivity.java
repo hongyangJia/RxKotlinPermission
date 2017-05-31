@@ -43,20 +43,9 @@ public class MainActivity extends AppCompatActivity {
         rxKotlinPermission.requestCamera().subscribe(new Consumer<RxInteractive>() {
             @Override
             public void accept(@NonNull RxInteractive rxInteractive) throws Exception {
-                switch (rxInteractive.getRxMode()) {
-                    case GRACE_RECRY:
-                        Log.e(TAG, "GRACE_RECRY");
-                        break;
-                    case GRACE_ALLOW:
-                        Log.e(TAG, "GRACE_ALLOW");
-                        break;
-                    case GRACE_REFUSE:
-                        Log.e(TAG, "GRACE_REFUSE");
-                        break;
-                    case GRACE_HIDE:
-                        Log.e(TAG, "GRACE_HIDE");
-                        break;
-                }
+                /**
+                 * success
+                 */
             }
         });
     }
@@ -73,7 +62,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNext(RxInteractive rxLimit) {
-
+                /**
+                 * success
+                 */
             }
 
             @Override
@@ -88,8 +79,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     /**
-     * Custom
+     * requestCustom
      */
     public  void requestCustom(){
         rxKotlinPermission.setCancelInteractive();
@@ -115,9 +107,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    void ss(){
-
+    /**
+     * customLayout
+     */
+   public void customLayout(){
+        rxKotlinPermission.settingRequest().setting(new RxRequest.Builder().title("Current permissions").message("Permission description").build());
     }
-
 
 }
