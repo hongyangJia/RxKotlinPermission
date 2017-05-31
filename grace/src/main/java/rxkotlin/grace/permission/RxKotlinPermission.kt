@@ -15,9 +15,9 @@ class RxKotlinPermission(mContext: Activity) {
         this.rxGrace = RxGracePermission(mContext)
     }
 
-    protected fun request(vararg permission: String) {
+    fun request(vararg permission: String): Observable<RxInteractive>{
         RxTool.rxNullPointerException(rxGrace!!)
-        rxGrace!!.request(*permission)
+        return rxGrace!!.request(*permission)
     }
 
     fun requestCamera(): Observable<RxInteractive> {

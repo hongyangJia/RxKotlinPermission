@@ -1,5 +1,6 @@
 package example.permission;
 
+import android.Manifest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -41,9 +42,20 @@ public class MainActivity extends AppCompatActivity {
         rxKotlinPermission.requestCamera().subscribe(new Consumer<RxInteractive>() {
             @Override
             public void accept(@NonNull RxInteractive rxInteractive) throws Exception {
-                /**
-                 * success
-                 */
+                switch (rxInteractive.getRxMode()) {
+                    case GRACE_RECRY:
+                        Log.e(TAG, "GRACE_RECRY");
+                        break;
+                    case GRACE_ALLOW:
+                        Log.e(TAG, "GRACE_ALLOW");
+                        break;
+                    case GRACE_REFUSE:
+                        Log.e(TAG, "GRACE_REFUSE");
+                        break;
+                    case GRACE_HIDE:
+                        Log.e(TAG, "GRACE_HIDE");
+                        break;
+                }
             }
         });
     }
@@ -75,18 +87,33 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-/*      switch (rxLimit.getRxMode()){
-        case GRACE_RECRY:
-            Log.e(TAG,"GRACE_RECRY");
-            break;
-        case GRACE_ALLOW:
-            Log.e(TAG,"GRACE_ALLOW");
-            break;
-        case GRACE_REFUSE:
-            Log.e(TAG,"GRACE_REFUSE");
-            break;
-        case GRACE_HIDE:
-            Log.e(TAG,"GRACE_HIDE");
-            break;*/
+    /**
+     *
+     */
+    public  void requestCustom(){
+
+        rxKotlinPermission.request(Manifest.permission.WRITE_SETTINGS,
+                Manifest.permission.WRITE_SETTINGS).subscribe(new Consumer<RxInteractive>() {
+            @Override
+            public void accept(@NonNull RxInteractive rxInteractive) throws Exception {
+                switch (rxInteractive.getRxMode()) {
+                    case GRACE_RECRY:
+                        Log.e(TAG, "GRACE_RECRY");
+                        break;
+                    case GRACE_ALLOW:
+                        Log.e(TAG, "GRACE_ALLOW");
+                        break;
+                    case GRACE_REFUSE:
+                        Log.e(TAG, "GRACE_REFUSE");
+                        break;
+                    case GRACE_HIDE:
+                        Log.e(TAG, "GRACE_HIDE");
+                        break;
+                }
+            }
+        });
+    }
+
+
 
 }
