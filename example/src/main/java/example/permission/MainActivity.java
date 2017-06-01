@@ -115,8 +115,6 @@ public class MainActivity extends AppCompatActivity {
      * customLayout
      */
    public void customLayout(){
-
-
         rxKotlinPermission.settingRequest().setting(new RxRequest.Builder().title("Current permissions").message("Permission description").build());
     }
 
