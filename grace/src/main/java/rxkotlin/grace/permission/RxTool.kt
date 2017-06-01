@@ -16,8 +16,8 @@ import java.util.ArrayList
  */
 object RxTool {
 
-    val TITLE = "DEFULT"
-    val MESSAGE = "DEFULT"
+    const val TITLE = "DEFULT"
+    const val MESSAGE = "DEFULT"
 
     fun toAndroidSetting(context: Context) {
         val intent = Intent(Settings.ACTION_APPLICATION_SETTINGS)
