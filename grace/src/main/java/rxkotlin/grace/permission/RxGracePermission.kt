@@ -5,6 +5,8 @@ import android.content.Context
 import android.os.Build
 import android.support.annotation.RequiresApi
 import io.reactivex.*
+import io.reactivex.disposables.Disposable
+import org.reactivestreams.Subscriber
 import rxkotlin.grace.permission.ui.IRxDialog
 import rxkotlin.grace.permission.ui.RxDescription
 import java.util.ArrayList
@@ -87,7 +89,7 @@ class RxGracePermission(mContext: Activity) : RxFragment.OnHasPermissionListener
         RxTool.rxNullPointerException(rxObserver!!)
         when (interactive) {
             INTERACTIVE.DEFAULT -> rxObserver!!.onError(Throwable("RxGrace : refuse "))
-            INTERACTIVE.LAMBDA -> rxObserver!!.onNext(RxInteractive(refuseList, RxMode.GRACE_REFUSE))
+            INTERACTIVE.LAMBDA ->  rxObserver!!.onComplete()
             INTERACTIVE.CUSTOMIZE -> rxObserver!!.onNext(RxInteractive(refuseList, RxMode.GRACE_REFUSE))
         }
     }

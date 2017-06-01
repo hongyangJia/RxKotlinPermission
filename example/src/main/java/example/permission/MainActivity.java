@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         rxKotlinPermission = new RxKotlinPermission(this);
-        requestCameraObserver();
+        request();
     }
 
     /**
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * success
                  */
+                Log.e(TAG,"accept");
             }
         });
     }
