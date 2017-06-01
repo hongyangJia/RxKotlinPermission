@@ -9,7 +9,7 @@
 **The first step is to include RxKotlinPermission into your project, for example, as a Gradle compile dependency:**
 
       maven { url 'https://jitpack.io' }
-      compile 'com.github.hongyangJia:RxKotlinPermission:1.1.2'
+      compile 'com.github.hongyangJia:RxKotlinPermission:1.1.3'
       
       ext {
           rxJava = 'io.reactivex.rxjava2:rxkotlin:x.x.x'
