@@ -10,7 +10,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/example" />
             <option value="$PROJECT_DIR$/grace" />
-            <option value="$PROJECT_DIR$/rx" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
