@@ -1,20 +1,14 @@
 package rxkotlin.grace.permission.ui
 
-import android.Manifest
 import android.app.Activity
-import android.util.Log
 import rxkotlin.grace.permission.R
-import rxkotlin.grace.permission.RxKotlinPermission
-import rxkotlin.grace.permission.RxRequest
-import rxkotlin.grace.permission.RxTool
-import rxkotlin.grace.permission.RxTool.MESSAGE
-import java.util.ArrayList
-import java.util.HashMap
+import rxkotlin.grace.permission.date.KtRequest
+import java.util.*
 
 /**
  * Created by hongyang on 17-5-24.
  */
-object RxDescription {
+object Description {
 
     private var DECLINE_START: String? = null
     private var DECLINE_END: String? = null
@@ -31,17 +25,18 @@ object RxDescription {
         FOREVER_END = mContext.getString(R.string.forever_end)
     }
 
-    fun declineDescription(rxRequest: RxRequest, mContext: Activity, permissions: ArrayList<String>): String {
+    fun declineDescription(rxRequest: KtRequest, mContext: Activity, permissions: ArrayList<String>): String {
+        var s = rxRequest.message
         initDescription(mContext)
-        var message = if (rxRequest.message.equals(MESSAGE)) DECLINE_START else rxRequest.message
+        var message = if (rxRequest.message.equals(DEFULT)) DECLINE_START else rxRequest.message
         val buffer = StringBuffer(message + " ")
         buffer.append(edit(mContext, permissions)).append(" " + DECLINE_END)
         return buffer.toString()
     }
 
-    fun foreverDescription(rxRequest: RxRequest, mContext: Activity, permissions: ArrayList<String>): String {
+    fun foreverDescription(rxRequest: KtRequest, mContext: Activity, permissions: ArrayList<String>): String {
         initDescription(mContext)
-        var message = if (rxRequest.message.equals(MESSAGE)) FOREVER_START else rxRequest.message
+        var message = if (rxRequest.message.equals(DEFULT)) FOREVER_START else rxRequest.message
         val buffer = StringBuffer(message + " ")
         buffer.append(edit(mContext, permissions)).append(" " + FOREVER_END)
         return buffer.toString()
@@ -60,7 +55,7 @@ object RxDescription {
             }
         }
         if (status) {
-            buffer.deleteCharAt(buffer.length - 1)
+            buffer.deleteCharAt(buffer.length - 1).append(" "+PERMISSIOIN)
         }
         return buffer.toString()
     }
