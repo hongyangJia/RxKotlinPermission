@@ -18,10 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        KtPermissionSetting.INSTANCE.title("hello").message("就是这么牛").build(this);
         KtPermission permission = new KtPermission(this);
-
         permission.requestCamera().launcher(new LaunchTask() {
             @Override
             public void launch(boolean b) {
