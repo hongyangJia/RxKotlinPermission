@@ -40,5 +40,5 @@ For more information please see the https://github.com/hongyangJia/RxPermission.
                    new KtRequest.Builder().title("title").messag e("message")
                    .rxDialog(new DefaultTemplate(this)).build(this));
 
-  https://github.com/hongyangJia/RxPermission/docs
+  https://github.com/hongyangJia/RxPermission/docs  
  
