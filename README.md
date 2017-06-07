@@ -13,7 +13,8 @@ For more information please see the https://github.com/hongyangJia/RxPermission.
 **The first step is to include RxKotlinPermission into your project, for example, as a Gradle compile dependency:**
 
       maven { url 'https://jitpack.io' }
-      compile 'com.github.hongyangJia:RxKotlinPermission:1.1.5'
+      
+      compile 'com.github.hongyangJia:RxKotlinPermission:1.1.6'
       
       ext {
           appcompat = 'com.android.support:appcompat-v7:xx.x.x'
