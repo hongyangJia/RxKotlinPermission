@@ -42,5 +42,5 @@ For more information please see the https://github.com/hongyangJia/RxPermission.
 
  
  
-  ddd https://github.com/hongyangJia/RxPermission/docs  
+  ddd https://github.com/hongyangJia/RxKotlinPermission/tree/master/docs
  
