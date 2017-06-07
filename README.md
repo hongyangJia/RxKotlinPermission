@@ -4,7 +4,7 @@
 
  Support internationalization(English Chinese) 
 
-**Support Kotlin**
+**Support RxJava**
 
 For more information please see the https://github.com/hongyangJia/RxPermission.
 
