@@ -91,15 +91,17 @@ class RequestFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.M)
     private fun requestAbove(vararg permissions: String) {
         var permissions = getDeniedPermissions(*permissions)
-        if (permissions.isEmpty()) onHasPermissionListener!!.allow()
+        //isSuccess
+        if (permissions.isEmpty()) {
+            onHasPermissionListener!!.allow()
+            return
+        }
+
         when (shouldShowRationalePermissions(this, *permissions)) {
            //explain
             true -> this.onHasPermissionListener!!.retry(ArrayList<String>(Arrays.asList(*permissions)))
            //System request permission
-            false -> {
-                //isSuccess
-              requestPermissions(permissions, REQUEST_CODE)
-            }
+            false -> requestPermissions(permissions, REQUEST_CODE)
         }
     }
 

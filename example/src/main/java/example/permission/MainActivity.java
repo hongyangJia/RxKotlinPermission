@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import rxkotlin.grace.permission.KtPermission;
+import rxkotlin.grace.permission.KtPermissionSetting;
+import rxkotlin.grace.permission.date.KtRequest;
 import rxkotlin.grace.permission.launcher.LaunchTask;
 
 
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        KtPermissionSetting.INSTANCE.Setting(new KtRequest.Builder().message("").build(this));
         KtPermission permission = new KtPermission(this);
         permission.requestCamera().launcher(new LaunchTask() {
             @Override
@@ -24,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
-
-
 }
