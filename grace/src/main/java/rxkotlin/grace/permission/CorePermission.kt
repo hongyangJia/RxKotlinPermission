@@ -18,25 +18,52 @@ import java.util.ArrayList
  */
 class CorePermission(mContext: Activity) : RequestFragment.OnHasPermissionListener, Template.OnIRxDialogListener, Launcher {
 
+    /**
+     *The user disables the system privilege reminder
+     * 用户禁止系统权限提醒标识
+     */
     private val FOREVER_DESCRIPTION = "foreverDescription"
 
+    /**
+     *The user rejects the system privilege reminder
+     * 用户拒绝系统权限提醒标识
+     */
     private val DECLINE_DESCRIPTION = "declineDescription"
 
+    /**
+     * Make sure the fragment is not created repeatedly
+     * 保证fragment不重复创建
+     */
     private val TAG = CorePermission::javaClass.name
 
+    /**
+     *Create a request permission class
+     * 创建请求权限类
+     */
     private var rxPermissionsFragment: RequestFragment
+
 
     private var mContext: Activity? = null;
 
+    /**
+     * dialog
+     */
     private var rxDialog: Template? = null
 
+    /**
+     * Request permission callback
+     * 请求权限回调
+     */
     private var launcher: LaunchTask? = null
 
+    /**
+     *
+     */
     var  permission:Array<String>?=null
 
     init {
         this.mContext = mContext
-        KtPermissionSetting.isFirst(mContext)
+        KtPermissionSetting.Value.isFirst(mContext)
         rxPermissionsFragment = getRxPermissionsFragment(mContext)
     }
 
@@ -113,18 +140,22 @@ class CorePermission(mContext: Activity) : RequestFragment.OnHasPermissionListen
         rxDialog!!.setOnIRxDialogListener(this)
         when (status) {
             FOREVER_DESCRIPTION -> rxDialog!!.noPromptPermission(
-                     KtPermissionSetting.getSetting().title,
-                     Description.foreverDescription(KtPermissionSetting.getSetting(), mContext!!, permissions))
+                     KtPermissionSetting.Value.getTitle(),
+                     Description.foreverDescription(
+                     KtPermissionSetting.Value.getMessage()
+                     , mContext!!, permissions))
             DECLINE_DESCRIPTION -> rxDialog!!.promptPermission(
-                     KtPermissionSetting.getSetting().title,
-                     Description.declineDescription(KtPermissionSetting.getSetting(), mContext!!, permissions))
+                    KtPermissionSetting.Value.getTitle(),
+                     Description.declineDescription(
+                     KtPermissionSetting.Value.getMessage()
+                     , mContext!!, permissions))
         }
         rxDialog!!.show()
     }
 
     fun iRxDialog(mContext: Activity) {
         if (rxDialog == null) {
-            val c = Class.forName(KtPermissionSetting.getSetting().rxDialog)
+            val c = Class.forName(KtPermissionSetting.Value.getDialog())
             val con = c.getConstructor(Context::class.java)
             rxDialog = con.newInstance(mContext) as Template
         }

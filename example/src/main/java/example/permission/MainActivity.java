@@ -5,10 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import rxkotlin.grace.permission.KtPermission;
 import rxkotlin.grace.permission.KtPermissionSetting;
-import rxkotlin.grace.permission.date.KtRequest;
 import rxkotlin.grace.permission.launcher.LaunchTask;
-import rxkotlin.grace.permission.ui.DefaultTemplate;
-import rxkotlin.grace.permission.ui.Template;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        KtPermissionSetting.INSTANCE.title("hello").message("就是这么牛").build(this);
         KtPermission permission = new KtPermission(this);
+
         permission.requestCamera().launcher(new LaunchTask() {
             @Override
             public void launch(boolean b) {
@@ -34,5 +33,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
+
 }

@@ -6,8 +6,11 @@ package rxkotlin.grace.permission.ui
 interface Template {
 
     interface OnIRxDialogListener {
+
         fun onRequest()
+
         fun toAndroidSetting()
+
         fun refuse()
     }
 

@@ -36,7 +36,7 @@ For more information please see the https://github.com/hongyangJia/RxPermission.
 **Custom title or message or dialog:**
      
            KtPermissionSetting.INSTANCE.Setting(
-                   new KtRequest.Builder().title("title").message("message")
+                   new KtRequest.Builder().title("title").messag e("message")
                    .rxDialog(new DefaultTemplate(this)).build(this));
 
  
