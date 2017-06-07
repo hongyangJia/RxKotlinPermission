@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         KtPermissionSetting.INSTANCE.Setting(new KtRequest.Builder().message("").build(this));
         KtPermission permission = new KtPermission(this);
         permission.requestCamera().launcher(new LaunchTask() {
