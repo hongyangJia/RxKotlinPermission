@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">RxKotlinPermission</string>
-
     <!-- CAMERA-->
     <string name="android.permission.CAMERA">照相机</string>
 
