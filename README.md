@@ -10,3 +10,9 @@
  **Use Permission**
  
  Doc:[中文](https://github.com/hongyangJia/RxKotlinPermission/tree/master/docs ) ,[英文](https://github.com/hongyangJia/RxKotlinPermission/tree/master/docs )  
+
+**support all Android version from Android 4.0 to 7.0**
+
+  
+  
+  
