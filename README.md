@@ -1,7 +1,6 @@
 **Description**
 
-[中文](https://github.com/hongyangJia/RxKotlinPermission/tree/master/docs )  
-[英文](https://github.com/hongyangJia/RxKotlinPermission/tree/master/docs )  
+[中文](https://github.com/hongyangJia/RxKotlinPermission/tree/master/docs ) ,[英文](https://github.com/hongyangJia/RxKotlinPermission/tree/master/docs )  
  Android Kotlin Request permission library,Internal implementation request permission, successful ||  failure interface interaction
 
  Support internationalization(English Chinese) 
