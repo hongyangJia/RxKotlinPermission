@@ -1,7 +1,8 @@
+ # RxKotlinPermission
+ 
 [![Release Version](https://img.shields.io/badge/release-1.1.7-yellow.svg)](https://github.com/hongyangJia/RxKotlinPermission/releases) 
  
- **Description**
- Android Kotlin Request permission library,Internal implementation request permission, successful ||  failure interface interaction
+ RxKotlinPermission is a Android Kotlin Request permission library,Internal implementation request permission, successful ||  failure interface interaction
  Support internationalization(English Chinese) 
  
  Support all Android version from Android 4.0 to 7.0
