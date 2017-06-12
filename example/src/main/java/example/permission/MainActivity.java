@@ -25,19 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
       /*  getSupportFragmentManager().beginTransaction().add(new Fragment2(),"MainActivity").commit();*/
-       Log.e(TAG,"get init");
-       requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE},1000);
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        Log.e(TAG,"get permission");
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
 
-    @Override
-    protected void onDestroy() {
-        Toast.makeText(this,"s",Toast.LENGTH_LONG).show();
-        super.onDestroy();
-    }
 }
