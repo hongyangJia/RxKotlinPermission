@@ -2,6 +2,7 @@
 
  Android Kotlin Request permission library,Internal implementation request permission, successful ||  failure interface interaction
  Support internationalization(English Chinese) 
+ 
  Support all Android version from Android 4.0 to 7.0
  
 **Support RxJava**
