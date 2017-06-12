@@ -13,4 +13,4 @@
 
 **Support**
 
- Atlas support all Android version from Android 4.0 to 7.0
+  support all Android version from Android 4.0 to 7.0
