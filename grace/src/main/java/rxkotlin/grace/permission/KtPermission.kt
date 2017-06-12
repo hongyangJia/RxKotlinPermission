@@ -40,7 +40,7 @@ class KtPermission(mContext: Activity):Permission<Launcher> {
     }
 
     override fun requestLocation(): Launcher {
-        return CorePermission(mContext!!).request(Manifest.permission.ACCESS_FINE_LOCATION)
+        return CorePermission(mContext!!).request(Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION)
     }
 
     override fun requestContacts(): Launcher {

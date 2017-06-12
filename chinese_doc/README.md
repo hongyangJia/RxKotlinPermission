@@ -1,6 +1,6 @@
-**Getting started**
+**使用说明**
 
-**The first step is to include RxKotlinPermission into your project, for example, as a Gradle compile dependency:**
+**添加请求库到gradle, :**
 
       maven { url 'https://jitpack.io' }
       
