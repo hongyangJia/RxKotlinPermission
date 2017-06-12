@@ -1,5 +1,5 @@
 **Description**
-
+[![Release Version](https://img.shields.io/badge/release-5.0.7-yellow.svg)](https://github.com/hongyangJia/RxKotlinPermission/releases) 
  Android Kotlin Request permission library,Internal implementation request permission, successful ||  failure interface interaction
  Support internationalization(English Chinese) 
  
