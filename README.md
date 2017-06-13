@@ -13,5 +13,5 @@
 
  **Use Permission**
  
- Doc:[中文](https://github.com/hongyangJia/RxKotlinPermission/tree/master/docs ) ,[English](https://github.com/hongyangJia/RxKotlinPermission/tree/master/docs )  
+ Doc:[中文](https://github.com/hongyangJia/RxKotlinPermission/tree/master/chinese_doc) , [English](https://github.com/hongyangJia/RxKotlinPermission/tree/master/docs)  
  
