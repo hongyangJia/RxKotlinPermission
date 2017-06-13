@@ -24,7 +24,7 @@
                }
            });
  
-**Custom title or message or dialog:**
+**Custom title or message or dialog(reference DefaultTemplate class):**
      
            KtPermissionSetting.INSTANCE.Setting(
                    new KtRequest.Builder().title("title").messag e("message")
