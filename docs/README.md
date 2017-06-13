@@ -4,7 +4,7 @@
 
       maven { url 'https://jitpack.io' }
       
-      compile 'com.github.hongyangJia:RxKotlinPermission:1.1.6'
+      compile 'com.github.hongyangJia:RxKotlinPermission:1.1.8'
       
       ext {
           appcompat = 'com.android.support:appcompat-v7:xx.x.x'
