@@ -15,12 +15,14 @@ import rxkotlin.grace.permission.launcher.LaunchTask;
 
 
 public class MainActivity extends AppCompatActivity {
+
     private static final String TAG=MainActivity.class.getSimpleName();
-    @RequiresApi(api = Build.VERSION_CODES.M)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportFragmentManager().beginTransaction().add(new Fragment2(),TAG).commit();
     }
+
 }
