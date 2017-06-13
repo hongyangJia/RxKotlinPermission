@@ -24,7 +24,7 @@
                }
            });
  
-**自定义显示对话框title,message提示语言,自定义对话框:**
+**自定义对话框title message提示语言,自定义对话框可参考DefaultTemplate实现类 :**
      
            KtPermissionSetting.INSTANCE.Setting(
                    new KtRequest.Builder().title("title").messag e("message")
