@@ -24,6 +24,7 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
 ext {
     rxJava = 'io.reactivex.rxjava2:rxkotlin:2.0.3'
     appcompat = 'com.android.support:appcompat-v7:25.3.1'

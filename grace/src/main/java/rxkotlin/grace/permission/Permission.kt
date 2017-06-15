@@ -87,10 +87,14 @@ interface Permission<T> {
      */
     fun requestCameraMicroPhone(): T
 
+    fun requestBluetoothLocation():T
+
     /**
      * request CameraMicroPhoneStorage permissions
      * @return T Generic
      */
     fun requestCameraMicroPhoneStorage(): T
+
+
 
 }

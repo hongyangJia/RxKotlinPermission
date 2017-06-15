@@ -67,6 +67,10 @@ class KtPermission(mContext: Activity):Permission<Launcher> {
         return CorePermission(mContext!!).request(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
     }
 
+    override fun requestBluetoothLocation(): Launcher {
+        return CorePermission(mContext!!).request(Manifest.permission.BLUETOOTH, Manifest.permission.BLUETOOTH_ADMIN,Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
+    }
+
     override  fun requestCameraMicroPhoneStorage(): Launcher {
         return CorePermission(mContext!!).request(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE)
     }
