@@ -44,7 +44,7 @@
     <string name="decline_start">我们需要访问的</string>
     <string name="decline_end">已被你拒绝,请点击允许!</string>
     <string name="forever_start">我们需要访问的</string>
-    <string name="forever_end">已被你拒绝,请到手机设置页面手动开启!</string>
+    <string name="forever_end">已被你拒绝,请到设置页面手动开启!</string>
     <string name="permission_again">获取权限</string>
     <string name="permission_setting">确定</string>
     <string name="permission_cancel">取消</string>
