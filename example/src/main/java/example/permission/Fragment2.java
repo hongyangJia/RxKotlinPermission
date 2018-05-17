@@ -3,6 +3,7 @@ package example.permission;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,7 @@ public class Fragment2 extends android.support.v4.app.Fragment {
 
             @Override
             public void launch(boolean b) {
+                Log.e(Fragment2.class.getSimpleName(),b?"true":"false");
                 if (b){
                     /**
                      * success

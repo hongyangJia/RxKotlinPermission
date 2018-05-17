@@ -122,9 +122,8 @@ class CorePermission(mContext: Activity) : RequestFragment.OnHasPermissionListen
 
     override
     fun toAndroidSetting() {
-        nullPointerException(mContext!!)
-        val intent = Intent(Settings.ACTION_APPLICATION_SETTINGS)
-        mContext!!.startActivity(intent)
+        nullPointerException(launcher!!)
+        launcher!!.launch(false)
     }
 
     @RequiresApi(Build.VERSION_CODES.M)

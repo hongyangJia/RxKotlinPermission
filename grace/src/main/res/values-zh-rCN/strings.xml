@@ -46,7 +46,7 @@
     <string name="forever_start">我们需要访问的</string>
     <string name="forever_end">已被你拒绝,请到手机设置页面手动开启!</string>
     <string name="permission_again">获取权限</string>
-    <string name="permission_setting">设置</string>
+    <string name="permission_setting">确定</string>
     <string name="permission_cancel">取消</string>
     <string name="permission_title_permission_failed">权限被禁止</string>
     <string name="permission_title_permission_rationale">权限已被拒绝</string>

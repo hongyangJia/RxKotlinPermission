@@ -146,8 +146,9 @@ class RequestFragment : Fragment() {
             var arrayList = hasAlwaysDeniedPermission(this, arrayList)
             if (!arrayList.isEmpty()) {
                 onHasPermissionListener!!.hide(arrayList)
+            }else{
+                onHasPermissionListener!!.refuse()
             }
-            onHasPermissionListener!!.refuse()
         } else {
             onHasPermissionListener!!.allow()
         }
